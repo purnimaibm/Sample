@@ -4,14 +4,14 @@
 <!----><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
 <model-identification modelTag="">
 <model-identification-field name="Application Name" partOfTag="true" value="OTFA_Release65"/>
-<model-identification-field name="Application code version #" partOfTag="true" value="1"/>
+<model-identification-field name="Application code version #" partOfTag="true" value=""/>
 <model-identification-field name="Application Function" partOfTag="true" value="OTFA_Release65_Test65"/>
-<model-identification-field name="Updated Reason" partOfTag="false" value="New model"/>
+<model-identification-field name="Updated Reason" partOfTag="false" value=""/>
 <model-identification-field name="Created By" partOfTag="false" value="purnima"/>
 <model-identification-field name="Created Date and Time" partOfTag="false" value="30 Mar 2022 16:09:16"/>
 <model-identification-field name="Updated By" partOfTag="false" value="purnima"/>
 <model-identification-field name="Updated Date and Time" partOfTag="false" value="30 Mar 2022 16:09:16"/>
-<model-identification-field name="Application Sub Function" partOfTag="true" value="subfun"/>
+<model-identification-field name="Application Sub Function" partOfTag="true" value=""/>
 <model-identification-field name="Test Stage" partOfTag="false" value=""/>
 <model-identification-field name="Criticality" partOfTag="false" value=""/>
 <model-identification-field name="Project" partOfTag="false" value=""/>
