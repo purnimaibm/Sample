@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE focus-model [
+]>
+<!----><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
+<model-identification modelTag="">
+<model-identification-field name="Application Name" partOfTag="true" value="OTFA_Release65"/>
+<model-identification-field name="Application code version #" partOfTag="true" value="1"/>
+<model-identification-field name="Application Function" partOfTag="true" value="OTFA_Release65_Test65"/>
+<model-identification-field name="Updated Reason" partOfTag="false" value="New model"/>
+<model-identification-field name="Created By" partOfTag="false" value="purnima"/>
+<model-identification-field name="Created Date and Time" partOfTag="false" value="30 Mar 2022 16:09:16"/>
+<model-identification-field name="Updated By" partOfTag="false" value="purnima"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="30 Mar 2022 16:09:16"/>
+<model-identification-field name="Application Sub Function" partOfTag="true" value="subfun"/>
+<model-identification-field name="Test Stage" partOfTag="false" value=""/>
+<model-identification-field name="Criticality" partOfTag="false" value=""/>
+<model-identification-field name="Project" partOfTag="false" value=""/>
+<model-identification-field name="Epic" partOfTag="false" value=""/>
+<model-identification-field name="Feature" partOfTag="false" value=""/>
+<model-identification-field name="User Story" partOfTag="false" value=""/>
+<model-identification-field name="Use attribute pool" partOfTag="false" value="false"/>
+</model-identification>
+<coverage-reqs-sets/>
+<neg-coverage-reqs-sets defaultCoverageRequirementsSet="SingleNegativeCoverageRequirementsSet" isAutoNegCoverageRequirements="true">
+<coverage-reqs-set description="" name="SingleNegativeCoverageRequirementsSet"/>
+</neg-coverage-reqs-sets>
+<focus-ctd-decoration decorationName="DefaultTestCaseNameDecoration" decorationType="testCaseName" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="true"/>
+<focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="false"/>
+<deactivates/>
+<attrs-to-delete/>
+<pool_comments/>
+<db-dependencies/>
+<focus-ctd-model-sync>
+<focus-ctd-model-sync-mult/>
+<focus-ctd-model-sync-na/>
+</focus-ctd-model-sync>
+</focus-model>
