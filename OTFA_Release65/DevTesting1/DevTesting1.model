@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE focus-model [
+]>
+<!--test2--><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
+<model-identification modelTag="@OTFA_Release65 @1 @OTFA_Release65_Test65 @test1">
+<model-identification-field name="Application Name" partOfTag="true" value="OTFA_Release65"/>
+<model-identification-field name="Application code version #" partOfTag="true" value="1"/>
+<model-identification-field name="Application Function" partOfTag="true" value="OTFA_Release65_Test65"/>
+<model-identification-field name="Updated Reason" partOfTag="false" value="New Model"/>
+<model-identification-field name="Created By" partOfTag="false" value="azra.dhalayat@in.ibm.com"/>
+<model-identification-field name="Created Date and Time" partOfTag="false" value="25 Jan 2019 12:04:24"/>
+<model-identification-field name="Updated By" partOfTag="false" value="madhu.gowdra"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="04 Apr 2022 11:13:26"/>
+<model-identification-field name="Application Sub Function" partOfTag="true" value="test1"/>
+<model-identification-field name="Test Stage" partOfTag="false" value=""/>
+<model-identification-field name="Criticality" partOfTag="false" value=""/>
+<model-identification-field name="Project" partOfTag="false" value=""/>
+<model-identification-field name="Epic" partOfTag="false" value=""/>
+<model-identification-field name="Feature" partOfTag="false" value=""/>
+<model-identification-field name="User Story" partOfTag="false" value=""/>
+<model-identification-field name="Use attribute pool" partOfTag="false" value="true"/>
+</model-identification>
+<attribute attr_class="NONE" dependencies="false" description="name of the user" group="" iotype="NEITHER" name="firstname" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@OTFA_Release65 @1 @OTFA_Release65_Test65 @test1" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="Edward" neg-value="false" weight="1"/>
+<value name="123456789012345678901234567890" neg-value="false" weight="1"/>
+</attribute>
+<coverage-reqs-sets defaultCoverageRequirementsSet="test">
+<coverage-reqs-set description="test" name="test">
+<coverage-req>
+<attribute name="firstname"/>
+<coverage-goal coverage-goal-val="1"/>
+</coverage-req>
+</coverage-reqs-set>
+</coverage-reqs-sets>
+<neg-coverage-reqs-sets defaultCoverageRequirementsSet="SingleNegativeCoverageRequirementsSet" isAutoNegCoverageRequirements="true">
+<coverage-reqs-set description="" name="SingleNegativeCoverageRequirementsSet"/>
+</neg-coverage-reqs-sets>
+<focus-ctd-decoration decorationName="Web" decorationType="cucumberDecoration" isActiveDecoration="true">
+<focus-ctd-trigger appliance="FIRST_TEST" is_or="false" name="Simple flow" negative="false" suppressNewLine="false" triggerType="Feature">
+<focus-ctd-single-template>
+<focus-ctd-template text="Simple flow"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="change scenario" negative="false" suppressNewLine="false" triggerType="Scenario">
+<focus-ctd-single-template>
+<focus-ctd-template text="change scenario"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Step 1" negative="false" suppressNewLine="false" triggerType="Steps">
+<focus-ctd-cucumber-steps-template>
+<cucumber-step actionName="navigateTo" additionalInfo="" category="NavigationalCategory" stepType="Given">
+<focus-ctd-template text="I navigate to &quot;http://simplephil-webtesting.blogspot.in/&quot;"/>
+<actionParameter data="&quot;http://simplephil-webtesting.blogspot.in/&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="populateTextField" additionalInfo="" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I enter into input field &quot;[Search]&quot; the value &quot;Good Day&quot;"/>
+<actionParameter data="&quot;[Search]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;Good Day&quot;" dataSource="Literal"/>
+</cucumber-step>
+</focus-ctd-cucumber-steps-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="tag1" negative="false" suppressNewLine="false" triggerType="Tagging">
+<focus-ctd-single-template>
+<focus-ctd-template text="@tag1"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+</focus-ctd-decoration>
+<focus-ctd-decoration decorationName="DefaultTestCaseNameDecoration" decorationType="testCaseName" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="false"/>
+<defaultParentDetails parentDetailsApplicationName="OTFA_Release65" parentDetailsFunctionality="Test65" parentDetailsModel="DevTesting1.model" parentDetailsModelTag="@OTFA_Release65 @1 @OTFA_Release65_Test65 @test1" parentDetailsPortfolio="Amica Portfolio" parentDetailsTenantId="IQP" parentDetailsUsername="madhu.gowdra"/>
+<deactivates/>
+<attrs-to-delete/>
+<pool_comments/>
+<db-dependencies/>
+<focus-ctd-model-sync>
+<focus-ctd-model-sync-mult/>
+<focus-ctd-model-sync-na/>
+</focus-ctd-model-sync>
+</focus-model>
