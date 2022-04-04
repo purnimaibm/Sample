@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE focus-model [
 ]>
 <!----><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
@@ -9,8 +9,8 @@
 <model-identification-field name="Updated Reason" partOfTag="false" value="New model"/>
 <model-identification-field name="Created By" partOfTag="false" value="purnima"/>
 <model-identification-field name="Created Date and Time" partOfTag="false" value="30 Mar 2022 12:26:05"/>
-<model-identification-field name="Updated By" partOfTag="false" value="purnima"/>
-<model-identification-field name="Updated Date and Time" partOfTag="false" value="30 Mar 2022 12:26:05"/>
+<model-identification-field name="Updated By" partOfTag="false" value="madhu.gowdra"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="04 Apr 2022 14:45:11"/>
 <model-identification-field name="Application Sub Function" partOfTag="true" value="Test65"/>
 <model-identification-field name="Test Stage" partOfTag="false" value=""/>
 <model-identification-field name="Criticality" partOfTag="false" value=""/>
@@ -18,7 +18,7 @@
 <model-identification-field name="Epic" partOfTag="false" value=""/>
 <model-identification-field name="Feature" partOfTag="false" value=""/>
 <model-identification-field name="User Story" partOfTag="false" value=""/>
-<model-identification-field name="Use attribute pool" partOfTag="false" value="false"/>
+<model-identification-field name="Use attribute pool" partOfTag="false" value="true"/>
 </model-identification>
 <coverage-reqs-sets/>
 <neg-coverage-reqs-sets defaultCoverageRequirementsSet="SingleNegativeCoverageRequirementsSet" isAutoNegCoverageRequirements="true">
@@ -28,9 +28,12 @@
 <focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="true"/>
 <focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
 <focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="false"/>
+<defaultParentDetails parentDetailsApplicationName="OTFA_Release65" parentDetailsFunctionality="Test65" parentDetailsModel="Model30Mar.model" parentDetailsModelTag="@OTFA_Release65 @1 @OTFA_Release65_Test65 @Test65" parentDetailsPortfolio="Amica Portfolio" parentDetailsTenantId="IQP" parentDetailsUsername="madhu.gowdra"/>
 <deactivates/>
 <attrs-to-delete/>
-<pool_comments/>
+<pool_comments>
+<pool_comment key="modelLastCommitDateToGIT" value="30 Mar 2022 13:11:46"/>
+</pool_comments>
 <db-dependencies/>
 <focus-ctd-model-sync>
 <focus-ctd-model-sync-mult/>
