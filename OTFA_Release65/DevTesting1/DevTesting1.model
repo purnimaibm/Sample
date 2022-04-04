@@ -10,7 +10,7 @@
 <model-identification-field name="Created By" partOfTag="false" value="azra.dhalayat@in.ibm.com"/>
 <model-identification-field name="Created Date and Time" partOfTag="false" value="25 Jan 2019 12:04:24"/>
 <model-identification-field name="Updated By" partOfTag="false" value="madhu.gowdra"/>
-<model-identification-field name="Updated Date and Time" partOfTag="false" value="04 Apr 2022 11:13:26"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="04 Apr 2022 14:43:56"/>
 <model-identification-field name="Application Sub Function" partOfTag="true" value="test1"/>
 <model-identification-field name="Test Stage" partOfTag="false" value=""/>
 <model-identification-field name="Criticality" partOfTag="false" value=""/>
@@ -72,7 +72,9 @@
 <defaultParentDetails parentDetailsApplicationName="OTFA_Release65" parentDetailsFunctionality="Test65" parentDetailsModel="DevTesting1.model" parentDetailsModelTag="@OTFA_Release65 @1 @OTFA_Release65_Test65 @test1" parentDetailsPortfolio="Amica Portfolio" parentDetailsTenantId="IQP" parentDetailsUsername="madhu.gowdra"/>
 <deactivates/>
 <attrs-to-delete/>
-<pool_comments/>
+<pool_comments>
+<pool_comment key="640fd1c7-fe6a-4a87-9e53-ab76767cb4f4" value="{&quot;name&quot;:&quot;firstname&quot;,&quot;version&quot;:&quot;2&quot;}"/>
+</pool_comments>
 <db-dependencies/>
 <focus-ctd-model-sync>
 <focus-ctd-model-sync-mult/>
