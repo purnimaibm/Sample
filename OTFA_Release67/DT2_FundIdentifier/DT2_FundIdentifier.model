@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE focus-model [
+]>
+<!--Model for DT2 Fund Identifier--><focus-model NAValue="NA" auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
+<model-identification modelTag="@OTFA_Release67 @1 @OTFA_Release67_RegressionTesting @Fund Identifier">
+<model-identification-field name="Application Name" partOfTag="true" value="OTFA_Release67"/>
+<model-identification-field name="Application code version #" partOfTag="true" value="1"/>
+<model-identification-field name="Application Function" partOfTag="true" value="OTFA_Release67_RegressionTesting"/>
+<model-identification-field name="Updated Reason" partOfTag="false" value="New Model"/>
+<model-identification-field name="Created By" partOfTag="false" value="tekumari@in.ibm.com"/>
+<model-identification-field name="Created Date and Time" partOfTag="false" value="18 Jan 2022 04:36:22"/>
+<model-identification-field name="Updated By" partOfTag="false" value="purnima"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="19 Apr 2022 17:54:26"/>
+<model-identification-field name="Application Sub Function" partOfTag="true" value="Fund Identifier"/>
+<model-identification-field name="Test Stage" partOfTag="false" value=""/>
+<model-identification-field name="Criticality" partOfTag="false" value=""/>
+<model-identification-field name="Project" partOfTag="false" value=""/>
+<model-identification-field name="Epic" partOfTag="false" value=""/>
+<model-identification-field name="Feature" partOfTag="false" value=""/>
+<model-identification-field name="User Story" partOfTag="false" value=""/>
+<model-identification-field name="Use attribute pool" partOfTag="false" value="true"/>
+</model-identification>
+<attribute attr_class="NONE" dependencies="false" description="" group="DT2FundIdentifier" iotype="NEITHER" name="DT2_ShareClassIdentifier" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@OTFA_Release67 @1 @OTFA_Release67_RegressionTesting @Fund Identifier" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="ISIN" neg-value="false" weight="1"/>
+<value name="SEDOL" neg-value="false" weight="1"/>
+<value name="CUSIP" neg-value="false" weight="1"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="DT2FundIdentifier" iotype="NEITHER" name="DT2_FundExists" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@OTFA_Release67 @1 @OTFA_Release67_RegressionTesting @Fund Identifier" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="Yes" neg-value="false" weight="1"/>
+<value name="No" neg-value="true" weight="1"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="DT2FundIdentifier" iotype="NEITHER" name="DT2_DealingMethod" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@OTFA_Release67 @1 @OTFA_Release67_RegressionTesting @Fund Identifier" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="STP" neg-value="false" weight="1"/>
+<value name="Portal" neg-value="false" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="DT2FundIdentifier" iotype="NEITHER" name="DT2_ShareclassAllowsDealingMethod" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@OTFA_Release67 @1 @OTFA_Release67_RegressionTesting @Fund Identifier" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="Yes" neg-value="false" weight="1"/>
+<value name="No" neg-value="false" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="DT2FundIdentifier" iotype="NEITHER" name="DT2_ShareClassFailpreference" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@OTFA_Release67 @1 @OTFA_Release67_RegressionTesting @Fund Identifier" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="Waive" neg-value="false" weight="1"/>
+<value name="Refer" neg-value="false" weight="1"/>
+<value name="Block" neg-value="true" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
+</attribute>
+<restriction expression="!(DT2_FundExists.equals(&quot;No&quot;)) || DT2_DealingMethod.equals(&quot;NA&quot;) &amp;&amp; DT2_ShareClassFailpreference.equals(&quot;NA&quot;) &amp;&amp; DT2_ShareclassAllowsDealingMethod.equals(&quot;NA&quot;)" group="" groupedExpression="!(FundExists.equals(&quot;No&quot;)) || DealingMethod.equals(&quot;NA&quot;) &amp;&amp; ShareClassFailpreference.equals(&quot;NA&quot;) &amp;&amp; ShareclassAllowsDealingMethod.equals(&quot;NA&quot;)" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="DT2_FundExists" operation="Equals">
+<focus-ctd-cond-val value="No"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="DT2_DealingMethod" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="DT2_ShareClassFailpreference" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="DT2_ShareclassAllowsDealingMethod" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(DT2_FundExists.equals(&quot;Yes&quot;)) || !DT2_ShareclassAllowsDealingMethod.equals(&quot;NA&quot;)" group="" groupedExpression="!(FundExists.equals(&quot;Yes&quot;)) || !ShareclassAllowsDealingMethod.equals(&quot;NA&quot;)" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="DT2_FundExists" operation="Equals">
+<focus-ctd-cond-val value="Yes"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="DT2_ShareclassAllowsDealingMethod" operation="Doesn't Equal">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(DT2_ShareclassAllowsDealingMethod.equals(&quot;Yes&quot;)) || DT2_ShareClassFailpreference.equals(&quot;NA&quot;)" group="" groupedExpression="!(ShareclassAllowsDealingMethod.equals(&quot;Yes&quot;)) || ShareClassFailpreference.equals(&quot;NA&quot;)" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="DT2_ShareclassAllowsDealingMethod" operation="Equals">
+<focus-ctd-cond-val value="Yes"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="DT2_ShareClassFailpreference" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(DT2_ShareclassAllowsDealingMethod.equals(&quot;No&quot;)) || !DT2_ShareClassFailpreference.equals(&quot;NA&quot;)" group="" groupedExpression="!(ShareclassAllowsDealingMethod.equals(&quot;No&quot;)) || !ShareClassFailpreference.equals(&quot;NA&quot;)" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="DT2_ShareclassAllowsDealingMethod" operation="Equals">
+<focus-ctd-cond-val value="No"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="DT2_ShareClassFailpreference" operation="Doesn't Equal">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<dont-care>
+<attr-value attribute="DT2_ShareclassAllowsDealingMethod" value="NA"/>
+</dont-care>
+<dont-care>
+<attr-value attribute="DT2_ShareClassFailpreference" value="NA"/>
+</dont-care>
+<dont-care>
+<attr-value attribute="DT2_DealingMethod" value="NA"/>
+</dont-care>
+<negative-combination>
+<attr-value attribute="DT2_ShareClassFailpreference" value="Block"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="DT2_FundExists" value="No"/>
+</negative-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_ShareClassIdentifier" value="CUSIP"/>
+<attr-value attribute="DT2_FundExists" value="No"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC6"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_ShareClassIdentifier" value="CUSIP"/>
+<attr-value attribute="DT2_FundExists" value="Yes"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC3"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_ShareClassIdentifier" value="ISIN"/>
+<attr-value attribute="DT2_FundExists" value="No"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC4"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_ShareClassIdentifier" value="ISIN"/>
+<attr-value attribute="DT2_FundExists" value="Yes"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC1"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_ShareClassIdentifier" value="SEDOL"/>
+<attr-value attribute="DT2_FundExists" value="No"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC5_"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_ShareClassIdentifier" value="SEDOL"/>
+<attr-value attribute="DT2_FundExists" value="Yes"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC2"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_DealingMethod" value="Portal"/>
+<attr-value attribute="DT2_ShareClassFailpreference" value="Block"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC12"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_DealingMethod" value="Portal"/>
+<attr-value attribute="DT2_ShareClassFailpreference" value="Refer"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC11"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_DealingMethod" value="Portal"/>
+<attr-value attribute="DT2_ShareClassFailpreference" value="Waive"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC10"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_DealingMethod" value="STP"/>
+<attr-value attribute="DT2_ShareClassFailpreference" value="Block"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC9"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_DealingMethod" value="STP"/>
+<attr-value attribute="DT2_ShareClassFailpreference" value="Refer"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC8"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="DT2_DealingMethod" value="STP"/>
+<attr-value attribute="DT2_ShareClassFailpreference" value="Waive"/>
+<requirement ID="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3.DT2_AC7"/>
+</requirements-tracking-combination>
+<requirements-collection>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC12" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC11" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC9" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC10" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC3" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC5_" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC4" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC1" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC2" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC7" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC8" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="EPIC 5_User Story Acceptance criteria_20SEP2021_Tranche 3" Keywords="" Ranking="2147483647" RequirementDescription="" RequirementId="DT2_AC6" Restrictions=""/>
+</requirements-collection>
+<coverage-reqs-sets defaultCoverageRequirementsSet="ImportedModelRequirements">
+<coverage-reqs-set description="Coverage Requirements from CartesianProductImporter" name="ImportedModelRequirements">
+<coverage-req>
+<attribute name="DT2_ShareClassIdentifier"/>
+<attribute name="DT2_FundExists"/>
+<attribute name="DT2_DealingMethod"/>
+<attribute name="DT2_ShareclassAllowsDealingMethod"/>
+<attribute name="DT2_ShareClassFailpreference"/>
+<coverage-goal coverage-goal-val="1"/>
+</coverage-req>
+<coverage-req>
+<attribute name="DT2_ShareClassIdentifier"/>
+<attribute name="DT2_FundExists"/>
+<coverage-goal coverage-goal-val="2"/>
+</coverage-req>
+<coverage-req>
+<attribute name="DT2_DealingMethod"/>
+<attribute name="DT2_ShareclassAllowsDealingMethod"/>
+<coverage-goal coverage-goal-val="2"/>
+</coverage-req>
+<coverage-req>
+<attribute name="DT2_DealingMethod"/>
+<attribute name="DT2_ShareClassFailpreference"/>
+<coverage-goal coverage-goal-val="2"/>
+</coverage-req>
+</coverage-reqs-set>
+</coverage-reqs-sets>
+<neg-coverage-reqs-sets defaultCoverageRequirementsSet="SingleNegativeCoverageRequirementsSet" isAutoNegCoverageRequirements="false">
+<coverage-reqs-set description="" name="SingleNegativeCoverageRequirementsSet">
+<coverage-req>
+<attribute name="DT2_ShareClassIdentifier"/>
+<coverage-goal coverage-goal-val="2"/>
+<negative-attribute-combination>
+<attribute name="DT2_FundExists"/>
+</negative-attribute-combination>
+</coverage-req>
+<coverage-req>
+<attribute name="DT2_DealingMethod"/>
+<coverage-goal coverage-goal-val="2"/>
+<negative-attribute-combination>
+<attribute name="DT2_ShareClassFailpreference"/>
+</negative-attribute-combination>
+</coverage-req>
+</coverage-reqs-set>
+</neg-coverage-reqs-sets>
+<focus-ctd-decoration decorationName="DefaultTestCaseNameDecoration" decorationType="testCaseName" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="true"/>
+<focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="false"/>
+<defaultParentDetails parentDetailsApplicationName="OTFA_Release67" parentDetailsFunctionality="RegressionTesting" parentDetailsModel="DT2_FundIdentifier.model" parentDetailsModelTag="@OTFA_Release67 @1 @OTFA_Release67_RegressionTesting @Fund Identifier" parentDetailsPortfolio="Test Application" parentDetailsTenantId="IQP" parentDetailsUsername="purnima"/>
+<deactivates/>
+<attrs-to-delete/>
+<pool_comments>
+<pool_comment key="f40b6ec8-c248-4ccb-bd2a-34ee267eae0b" value="{&quot;name&quot;:&quot;DT2_ShareClassIdentifier&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+<pool_comment key="aa1f8b21-e17f-4cc9-8df6-383179062145" value="{&quot;name&quot;:&quot;DT2_DealingMethod&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+<pool_comment key="924bc1c4-5259-499e-9dee-2dfe5b5907c1" value="{&quot;name&quot;:&quot;DT2_ShareclassAllowsDealingMethod&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+<pool_comment key="f06df08e-ecf6-4665-ac2f-62b5096b4d17" value="{&quot;name&quot;:&quot;DT2_FundExists&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+<pool_comment key="9f764cb5-7e7f-4bb5-891d-4bdf0958a0ee" value="{&quot;name&quot;:&quot;DT2_ShareClassFailpreference&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+</pool_comments>
+<db-dependencies/>
+<focus-ctd-model-sync>
+<focus-ctd-model-sync-mult/>
+<focus-ctd-model-sync-na>
+<negative-combination>
+<attr-value attribute="DT2_FundExists" value="No"/>
+</negative-combination>
+</focus-ctd-model-sync-na>
+</focus-ctd-model-sync>
+</focus-model>
